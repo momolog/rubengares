@@ -10,7 +10,7 @@ function photography_require_plugins() {
 	        'slug'               => 'photography-custom-post',
 	        'source'             => get_template_directory() . '/lib/plugins/photography-custom-post.zip',
 	        'required'           => true, 
-	        'version'            => '2.0.2',
+	        'version'            => '2.1',
 	    ),
 	    array(
 	        'name'               => 'Revolution Slider',
@@ -61,7 +61,7 @@ function photography_require_plugins() {
 	        'return'                          => esc_html__('Return to Required Plugins Installer', 'photography-translation' ),
 	        'plugin_activated'                => esc_html__('Plugin activated successfully.', 'photography-translation' ),
 	        'complete'                        => esc_html__('All plugins installed and activated successfully. %s', 'photography-translation' ),
-	        'nag_type'                        => 'updated'
+	        'nag_type'                        => 'update-nag'
 	    )
     );
  

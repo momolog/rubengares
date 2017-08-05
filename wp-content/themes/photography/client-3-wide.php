@@ -73,10 +73,10 @@ get_template_part("/templates/template-header");
 			$image_url = '';
 			$client_ID = get_the_ID();
 					
-			if(has_post_thumbnail($client_ID, 'original'))
+			if(has_post_thumbnail($client_ID, 'photography-gallery-grid'))
 			{
 			    $image_id = get_post_thumbnail_id($client_ID);
-			    $client_thumbnail = wp_get_attachment_image_src($image_id, 'original', true);
+			    $client_thumbnail = wp_get_attachment_image_src($image_id, 'photography-gallery-grid', true);
 			}
 			
 			$permalink_url = get_permalink($client_ID);

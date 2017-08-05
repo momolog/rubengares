@@ -1996,6 +1996,12 @@ body.single-galleries  #page_content_wrapper.split.wide
 	box-sizing: border-box;
 }
 
+.one.ppb_popup
+{
+	float: none;
+	margin: auto;
+}
+
 .one.skinbg
 {
 	background: #000;

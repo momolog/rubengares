@@ -3,7 +3,7 @@
 Plugin Name: Photography Theme Custom Post Type
 Plugin URI: http://themes.themegoods2.com/photography/demo/one
 Description: Plugin that will create custom post types for Photography theme.
-Version: 2.0.2
+Version: 2.1
 Author: ThemeGoods
 Author URI: http://themeforest.net/user/ThemeGoods
 License: GPLv2
@@ -823,6 +823,11 @@ function save_postdata( $post_id ) {
 			{
 				$is_zip = FALSE;
 			}
+			//If import from saved template
+			else if(isset($_POST['ppb_import_template_key']) && !empty($_POST['ppb_import_template_key']))
+			{
+				$is_zip = FALSE;
+			}
 			
 			if($is_zip)
 			{
@@ -857,14 +862,27 @@ function save_postdata( $post_id ) {
 			}
 			else
 			{
+				global $wp_filesystem;
+				
+				//If import demo pages
 				if(isset($_POST['ppb_import_demo_file']) && !empty($_POST['ppb_import_demo_file']))
 				{
 					$import_options_json = file_get_contents(get_template_directory().'/cache/demos/pages/'.$_POST['ppb_import_demo_file']);
 				}
+				//If import from saved template
+				else if(isset($_POST['ppb_import_template_key']) && !empty($_POST['ppb_import_template_key']))
+				{
+					$import_options_json = get_option( SHORTNAME."_template_".$_POST['ppb_import_template_key']);
+				}
 				else
 				{
 					//If .json file then import
-					$import_options_json = file_get_contents($_FILES["ppb_import_current_file"]["tmp_name"]);
+					$import_options_json = $wp_filesystem->get_contents($_FILES["ppb_import_current_file"]["tmp_name"]);
+					
+					if(empty($import_options_json))
+					{
+						$import_options_json = file_get_contents($_FILES["ppb_import_current_file"]["tmp_name"]);
+					}
 				}
 			}
 			

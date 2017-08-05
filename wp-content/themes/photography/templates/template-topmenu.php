@@ -182,11 +182,16 @@ elseif(is_home())
 			    
 			    if(is_single() && $post_type == 'galleries' && !empty($gallery_download))
 			    {
+			    	//Check if password protected
+					$gallery_password = get_post_meta($current_page_id, 'gallery_password', true);
+					
+					if(empty($gallery_password) OR (isset($_SESSION['gallery_page_'.$current_page_id]) && !empty($_SESSION['gallery_page_'.$current_page_id])))
+					{
 			?>
 			<div class="post_download_wrapper">
 			    <a id="gallery_download" class="tooltip" href="<?php echo esc_url($gallery_download); ?>" title="<?php esc_html_e('Download', 'photography-translation' ); ?>"><i class="fa fa-download"></i></a>
 			</div>
-			<?php	
+			<?php	}
 			    }
 			?>
     	

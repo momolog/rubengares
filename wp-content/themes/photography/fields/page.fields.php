@@ -244,7 +244,7 @@ function photography_page_save_postdata( $post_id ) {
 			else if(isset($_POST['ppb_import_template_key']) && !empty($_POST['ppb_import_template_key']))
 			{
 				$is_zip = FALSE;
-			} 
+			}
 			
 			WP_Filesystem();
 			

@@ -1,0 +1,104 @@
+global:
+  sql_adapter: "default"
+
+local:
+  vhost: "http://rubengares.dev"
+  wordpress_path: "/Users/aljoscha/Sites/rubengares" # use an absolute path here
+
+  database:
+    name:       "rubengares"
+    user:       "momolog"
+    password:   "logomom"
+    host:       "localhost"
+
+#######
+
+demo:
+  vhost:          "http://rubengares.momolog.info"
+  wordpress_path: "/kunden/presber.net/rubengares/" # use an absolute path here
+
+  database:
+    name:     "db30334_1"
+    user:     "db30334_1"
+    password: "plack47{Sohl"
+    host:     "mysql5.presber.net"
+    # port: "3308" # Use just in case you have exotic server config
+    # mysqldump_options: "--max_allowed_packet=1G" # Only available if using SSH
+
+  exclude:
+    - ".git/"
+    - ".gitignore"
+    - ".sass-cache/"
+    - "node_modules/"
+    - "bin/"
+    - "tmp/*"
+    - "Gemfile*"
+    - "Movefile"
+    - "wp-config.php"
+    - "wp-content/*.sql"
+
+  # paths: # you can customize wordpress internal paths
+  #   wp_content: "wp-content"
+  #   uploads: "wp-content/uploads"
+  #   plugins: "wp-content/plugins"
+  #   mu_plugins: "wp-content/mu-plugins"
+  #   themes: "wp-content/themes"
+  #   languages: "wp-content/languages"
+
+  ssh:
+    host:           "www.presber.net"
+    user:           "ssh-30334-aljoscha"
+    rsync_options:  "--verbose" # Additional rsync options, optional
+
+  # ftp:
+  #   user: "user"
+  #   password: "password"
+  #   host: "host"
+  #   passive: true
+  #   scheme: "ftps" # default "ftp"
+
+#######
+
+# production:
+#   vhost:          "http://www.augenglanz-berlin.de"
+#   wordpress_path: "/augenglanz-berlin.de"
+#
+#   database:
+#     name:     "db371021"
+#     user:     "db371021"
+#     password: "J9vgZd>fs6Tb"
+#     host:     "mysql5.augenglanz-berlin.de"
+#     # port: "3308" # Use just in case you have exotic server config
+#     # mysqldump_options: "--max_allowed_packet=1G" # Only available if using SSH
+#
+#   exclude:
+#     - ".git/"
+#     - ".gitignore"
+#     - ".sass-cache/"
+#     - "node_modules/"
+#     - "bin/"
+#     - "tmp/*"
+#     - "Gemfile*"
+#     - "Movefile"
+#     - "wp-config.php"
+#     - "wp-content/*.sql"
+#
+#   # paths: # you can customize wordpress internal paths
+#   #   wp_content: "wp-content"
+#   #   uploads: "wp-content/uploads"
+#   #   plugins: "wp-content/plugins"
+#   #   mu_plugins: "wp-content/mu-plugins"
+#   #   themes: "wp-content/themes"
+#   #   languages: "wp-content/languages"
+#
+#   # ssh:
+#   #   host:           "www.presber.net"
+#   #   user:           "ssh-30334-aljoscha"
+#   #   rsync_options:  "--verbose" # Additional rsync options, optional
+#
+#   ftp:
+#     user:     "371021-ftp"
+#     password: "T-b7bCvs"
+#     host:     "ftp.augenglanz-berlin.de"
+#     passive: true
+#   #   scheme: "ftps" # default "ftp"

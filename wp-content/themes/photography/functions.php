@@ -1468,11 +1468,8 @@ function photography_ppb() {
 			var currentItemData = jQuery('#<?php echo esc_js($_GET['rel']); ?>').data('ppb_setting');
 			var currentItemOBJ = jQuery.parseJSON(currentItemData);
 			
-			//If add action and has textarea then convert to visual editor
-			jQuery('.ppb_textarea').wp_editor();
-			
 			jQuery.each(currentItemOBJ, function(index, value) { 
-			  	if(typeof jQuery('#'+index) != 'undefined')
+			  	if(typeof jQuery('#'+index) != 'undefined' && jQuery('#'+index).length > 0)
 				{
 					jQuery('#'+index).val(decodeURI(value));
 					
@@ -1870,10 +1867,10 @@ function photography_ppb_set_template() {
 		
 		    foreach($ppb_form_item_arr as $key => $ppb_form_item)
 		    {
-		    	$ppb_form_item_data = get_post_meta($post_id, $ppb_form_item.'_data');
+		    	$ppb_form_item_data = get_post_meta($page_id, $ppb_form_item.'_data');
 		    	$export_options_arr[$ppb_form_item.'_data'] = $ppb_form_item_data;
 		    	
-		    	$ppb_form_item_size = get_post_meta($post_id, $ppb_form_item.'_size');
+		    	$ppb_form_item_size = get_post_meta($page_id, $ppb_form_item.'_size');
 		    	$export_options_arr[$ppb_form_item.'_size'] = $ppb_form_item_size;
 		    }
 		}

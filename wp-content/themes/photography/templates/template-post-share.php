@@ -17,7 +17,7 @@
 			<li><a class="tooltip twitter_share" title="<?php esc_html_e( 'Share On Twitter', 'grandnews' ); ?>" target="_blank" href="https://twitter.com/intent/tweet?original_referer=<?php echo get_permalink(); ?>&url=<?php echo get_permalink(); ?>"><i class="fa fa-twitter"></i><?php esc_html_e( 'Tweet It', 'grandnews' ); ?></a></li>
 			<li><a class="tooltip pinterest_share" title="<?php esc_html_e( 'Share On Pinterest', 'grandnews' ); ?>" target="_blank" href="http://www.pinterest.com/pin/create/button/?url=<?php echo urlencode(get_permalink()); ?>&media=<?php echo urlencode($pin_thumb[0]); ?>"><i class="fa fa-pinterest"></i></a></li>
 			<li><a class="tooltip google_share" title="<?php esc_html_e( 'Share On Google+', 'grandnews' ); ?>" target="_blank" href="https://plus.google.com/share?url=<?php echo get_permalink(); ?>"><i class="fa fa-google-plus"></i></a></li>
-			<li><a class="tooltip email_share" title="<?php esc_html_e('Share by Email', 'grandnews' ); ?>" href="mailto:?Subject=<?php echo esc_attr(urlencode($post->post_title)); ?>&amp;Body=<?php echo esc_attr(urlencode(get_permalink($post->ID))); ?>"><i class="fa fa-envelope"></i></a></li>
+			<li><a class="tooltip email_share" title="<?php esc_html_e('Share by Email', 'grandnews' ); ?>" href="mailto:?Subject=<?php echo esc_attr(urldecode($post->post_title)); ?>&amp;Body=<?php echo esc_attr(urldecode($post->post_title)); ?>&nbsp;<?php echo esc_attr(get_permalink($post->ID)); ?>"><i class="fa fa-envelope"></i></a></li>
 		</ul>
 	</div>
 	<br class="clear"/>

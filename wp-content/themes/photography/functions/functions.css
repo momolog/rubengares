@@ -1113,18 +1113,13 @@ output
 .rm_opts
 {
 	float:left;
-	width: 539px;
+	width: 538px;
 	background: #fff;
 	padding-bottom: 20px;
 	margin-top: 0;
 	min-height: 760px;
 	border-left: 1px solid #ddd;
 	margin-left:-1px;
-}
-
-.header_wrap input.button, .header_wrap input.button-primary
-{
-
 }
 
 #current_sidebar
@@ -1398,7 +1393,7 @@ textarea.blur, input[type=text].blur
 #ppb_demo_pages_wrapper li,
 #ppb_my_templates_wrapper li
 {
-	width: calc(50% - 12px);
+	width: calc(100% - 6px);
 	vertical-align: top;
 	margin: 0 5px 15px 5px;
 	padding: 3px;
@@ -1419,7 +1414,7 @@ textarea.blur, input[type=text].blur
 #ppb_my_templates_wrapper li,
 #ppb_demo_pages_wrapper li
 {
-	width: 85px;
+	width: 84px;
 	height: 110px;
 }
 
@@ -1631,7 +1626,7 @@ textarea.blur, input[type=text].blur
 
 #template_save_form input[type=text]
 {
-	width: 90%;
+	width: 89%;
 	display: inline-block;
 	height: 28px;
     margin: 0;
@@ -2801,6 +2796,12 @@ li.customize-control
 #enable_classic_builder.visible
 {
 	display: inline-block;
+}
+
+#setting-error-tgmpa
+{
+	clear: both;
+    display: block;
 }
 
 /**

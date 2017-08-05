@@ -47,7 +47,7 @@ jQuery(document).ready(function() {
 				jQuery('#<?php echo esc_js($response_id); ?> ul').append('<li class="error"><?php echo esc_html_e('Please enter', 'photography-translation' ); ?> '+labelText+'</li>');
 				hasError = true;
 			} else if(jQuery(this).hasClass('email')) {
-				var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+				var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,13})?$/;
 				if(!emailReg.test(jQuery.trim(jQuery(this).val()))) {
 					var labelText = jQuery(this).prev('label').text();
 					jQuery('#<?php echo esc_js($response_id); ?> ul').append('<li class="error"><?php echo esc_html_e('Please enter valid', 'photography-translation' ); ?> '+labelText+'</li>');

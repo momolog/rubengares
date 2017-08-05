@@ -116,7 +116,7 @@ jQuery(function($){
 		$image_caption = get_post_field('post_excerpt', $photo_id);
 		
 		//Get title and purchase URL HTML
-		$image_title_html = '<div class="tg_caption">'.esc_attr($image_caption).'</div>';
+		$image_title_html = '<div class="tg_caption">'.esc_js($image_caption).'</div>';
 		
 		//Get image purchase URL
 		$photography_purchase_url = get_post_meta($photo_id, 'photography_purchase_url', true);

@@ -1385,9 +1385,15 @@
 	{
 	    width: 50% !important;
 	}
+	
 	#fullpage .section.gallery_archive .gallery_archive_info 
 	{
 	    width: 50% !important;
+	}
+	
+	.ilightbox-holder.supportTouch div.ilightbox-container
+	{
+		overflow: visible;
 	}
 }
 

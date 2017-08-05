@@ -31,7 +31,7 @@
 	.one_half_bg:not(.nopadding) { padding: 40px !important; } 
 	.above_top_bar {  z-index: 99; } 
 	
-	#page_content_wrapper, .ppb_wrapper, #page_caption, #page_caption.hasbg, .footer_photostream_wrapper, #imageFlow, .footer_bar, .portfolio_recent_link
+	#page_content_wrapper, .ppb_wrapper, #page_caption, #page_caption.hasbg, .footer_photostream_wrapper, #imageFlow, .footer_bar, .portfolio_recent_link, .fullwidth_comment_wrapper, .standard_wrapper.single_portfolio
 	{ 
 	    width: calc(100% - 265px) !important; 
 	    margin-left: 265px !important; 
@@ -42,8 +42,6 @@
 	
 	.standard_wrapper.single_portfolio
 	{
-		width: calc(100% - 265px) !important; 
-		 margin-left: 265px !important;
 	    box-sizing: border-box; 
 	    max-width: 100% !important; 
 	    padding: 0; 

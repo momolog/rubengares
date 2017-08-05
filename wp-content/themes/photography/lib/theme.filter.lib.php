@@ -410,4 +410,23 @@ function photography_content_builder_enable ($post)
     echo '<a href="javascript:;" id="enable_builder" class="'.esc_attr($enable_builder_class).'" data-page-id="'.esc_attr($page_id).'"><i class="fa fa-th-list"></i>'.esc_html__('Edit in Content Builder', 'photography-translation' ).'</a>';
     echo '<a href="javascript:;" id="enable_classic_builder" class="'.esc_attr($enable_classic_builder_class).'"><i class="fa fa-edit"></i>'.esc_html__('Edit in Classic Editor', 'photography-translation' ).'</a>';
 }
+
+function photography_previous_post_where() {
+	global $post, $wpdb;
+	return $wpdb->prepare( "WHERE p.menu_order < %s AND p.post_type = %s AND p.post_status = 'publish'", $post->menu_order, $post->post_type);
+}
+add_filter( 'get_previous_post_where', 'photography_previous_post_where' );
+function photography_next_post_where() {
+	global $post, $wpdb;
+	return $wpdb->prepare( "WHERE p.menu_order > %s AND p.post_type = %s AND p.post_status = 'publish'", $post->menu_order, $post->post_type);
+}
+add_filter( 'get_next_post_where', 'photography_next_post_where' );
+function photography_previous_post_sort() {
+	return "ORDER BY p.menu_order desc LIMIT 1";
+}
+add_filter( 'get_previous_post_sort', 'photography_previous_post_sort' );
+function photography_next_post_sort() {
+	return "ORDER BY p.menu_order asc LIMIT 1";
+}
+add_filter( 'get_next_post_sort', 'photography_next_post_sort' );
 ?>

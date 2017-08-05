@@ -56,7 +56,7 @@ function ppb_text_func($atts, $content) {
 	{
 		$return_html.= '<div style="margin:auto;width:'.esc_attr(rawurldecode($width)).'">';
 	}
-	$return_html.= do_shortcode(photography_apply_content($content)).'</div>';
+	$return_html.= do_shortcode(photography_apply_content($content));
 	if(!empty($width))
 	{
 		$return_html.= '</div>';
@@ -403,7 +403,6 @@ function ppb_header_func($atts, $content) {
 	//Set end wrapper div for live builder
 	$return_html.= photography_live_builder_end_wrapper($builder_id);
 	
-	$return_html.= '</div>';
 	$return_html.= '</div>';
 	
 	if($size != 'one')

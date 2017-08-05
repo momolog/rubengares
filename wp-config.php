@@ -18,16 +18,10 @@
  * @package WordPress
  */
 
-  if ( file_exists( dirname( __FILE__ ) . '/wp-config-local.php' ) ) {
-    include( dirname( __FILE__ ) . '/wp-config-local.php' );
-    define( 'WP_LOCAL_DEV', true ); // We'll talk about this later
-  } else {
-    define('DB_NAME', 	  'db30334_1');           // Der Name der Datenbank, die du benutzt.
-    define('DB_USER', 	  'db30334_1');           // Dein MySQL Datenbank Benutzername.
-    define('DB_PASSWORD', 'plack47{Sohl');        // Dein MySQL Passwort
-    define('DB_HOST', 	  'mysql5.presber.net');
-  }
-
+define('DB_NAME', 	  'rubengares');     // Der Name der Datenbank, die du benutzt.
+define('DB_USER', 	  'momolog');        // Dein MySQL Datenbank Benutzername.
+define('DB_PASSWORD', 'logomom');        // Dein MySQL Passwort
+define('DB_HOST', 	  'localhost');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8mb4');
