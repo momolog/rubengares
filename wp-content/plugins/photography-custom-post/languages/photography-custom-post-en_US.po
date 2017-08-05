@@ -1,0 +1,521 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-24 12:58+0700\n"
+"PO-Revision-Date: 2016-02-24 12:58+0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;gettext;gettext_noop;_e;_n;esc_html__;esc_html_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../photography-custom-post.php:25
+msgid "Add New Gallery"
+msgstr "Add New Gallery"
+
+#: ../photography-custom-post.php:26
+msgid "Edit Gallery"
+msgstr ""
+
+#: ../photography-custom-post.php:27
+msgid "New Gallery"
+msgstr ""
+
+#: ../photography-custom-post.php:28
+msgid "View Gallery"
+msgstr ""
+
+#: ../photography-custom-post.php:29
+msgid "Search Gallery"
+msgstr ""
+
+#: ../photography-custom-post.php:30
+msgid "No Gallery found"
+msgstr ""
+
+#: ../photography-custom-post.php:31
+msgid "No Gallery found in Trash"
+msgstr ""
+
+#: ../photography-custom-post.php:53
+msgid "Search Gallery Categories"
+msgstr ""
+
+#: ../photography-custom-post.php:54
+msgid "All Gallery Categories"
+msgstr ""
+
+#: ../photography-custom-post.php:55
+msgid "Parent Gallery Category"
+msgstr ""
+
+#: ../photography-custom-post.php:56
+msgid "Parent Gallery Category:"
+msgstr ""
+
+#: ../photography-custom-post.php:57
+msgid "Edit Gallery Category"
+msgstr ""
+
+#: ../photography-custom-post.php:58
+msgid "Update Gallery Category"
+msgstr ""
+
+#: ../photography-custom-post.php:59
+msgid "Add New Gallery Category"
+msgstr ""
+
+#: ../photography-custom-post.php:60
+msgid "New Gallery Category Name"
+msgstr ""
+
+#: ../photography-custom-post.php:85
+msgid "Add New Portfolio"
+msgstr ""
+
+#: ../photography-custom-post.php:86
+msgid "Edit Portfolio"
+msgstr ""
+
+#: ../photography-custom-post.php:87
+msgid "New Portfolio"
+msgstr ""
+
+#: ../photography-custom-post.php:88
+msgid "View Portfolio"
+msgstr ""
+
+#: ../photography-custom-post.php:89
+msgid "Search Portfolios"
+msgstr ""
+
+#: ../photography-custom-post.php:90
+msgid "No Portfolio found"
+msgstr ""
+
+#: ../photography-custom-post.php:91
+msgid "No Portfolio found in Trash"
+msgstr ""
+
+#: ../photography-custom-post.php:113
+msgid "Search Portfolio Categories"
+msgstr ""
+
+#: ../photography-custom-post.php:114
+msgid "All Portfolio Categories"
+msgstr ""
+
+#: ../photography-custom-post.php:115
+msgid "Parent Portfolio Category"
+msgstr ""
+
+#: ../photography-custom-post.php:116
+msgid "Parent Portfolio Category:"
+msgstr ""
+
+#: ../photography-custom-post.php:117
+msgid "Edit Portfolio Category"
+msgstr ""
+
+#: ../photography-custom-post.php:118
+msgid "Update Portfolio Category"
+msgstr ""
+
+#: ../photography-custom-post.php:119
+msgid "Add New Portfolio Category"
+msgstr ""
+
+#: ../photography-custom-post.php:120
+msgid "New Portfolio Category Name"
+msgstr ""
+
+#: ../photography-custom-post.php:145
+#, fuzzy
+msgid "Add New Event"
+msgstr "Add New Gallery"
+
+#: ../photography-custom-post.php:146
+msgid "Edit Event"
+msgstr ""
+
+#: ../photography-custom-post.php:147
+msgid "New Event"
+msgstr ""
+
+#: ../photography-custom-post.php:148
+msgid "View Event"
+msgstr ""
+
+#: ../photography-custom-post.php:149
+msgid "Search Events"
+msgstr ""
+
+#: ../photography-custom-post.php:150
+msgid "No Event found"
+msgstr ""
+
+#: ../photography-custom-post.php:151
+msgid "No Event found in Trash"
+msgstr ""
+
+#: ../photography-custom-post.php:171
+msgid "Search Event Categories"
+msgstr ""
+
+#: ../photography-custom-post.php:172
+msgid "All Event Categories"
+msgstr ""
+
+#: ../photography-custom-post.php:173
+msgid "Parent Event Category"
+msgstr ""
+
+#: ../photography-custom-post.php:174
+msgid "Parent Event Category:"
+msgstr ""
+
+#: ../photography-custom-post.php:175
+msgid "Edit Event Category"
+msgstr ""
+
+#: ../photography-custom-post.php:176
+msgid "Update Event Category"
+msgstr ""
+
+#: ../photography-custom-post.php:177
+#, fuzzy
+msgid "Add New Event Category"
+msgstr "Add New Gallery"
+
+#: ../photography-custom-post.php:178
+msgid "New Event Category Name"
+msgstr ""
+
+#: ../photography-custom-post.php:205
+msgid "Add New Testimonial"
+msgstr ""
+
+#: ../photography-custom-post.php:206
+msgid "Edit Testimonial"
+msgstr ""
+
+#: ../photography-custom-post.php:207
+msgid "New Testimonial"
+msgstr ""
+
+#: ../photography-custom-post.php:208
+msgid "View Testimonial"
+msgstr ""
+
+#: ../photography-custom-post.php:209
+msgid "Search Testimonial"
+msgstr ""
+
+#: ../photography-custom-post.php:210
+msgid "No Testimonial found"
+msgstr ""
+
+#: ../photography-custom-post.php:211
+msgid "No Testimonial found in Trash"
+msgstr ""
+
+#: ../photography-custom-post.php:233
+msgid "Search Testimonial Categories"
+msgstr ""
+
+#: ../photography-custom-post.php:234
+msgid "All Testimonial Categories"
+msgstr ""
+
+#: ../photography-custom-post.php:235
+msgid "Parent Testimonial Category"
+msgstr ""
+
+#: ../photography-custom-post.php:236
+msgid "Parent Testimonial Category:"
+msgstr ""
+
+#: ../photography-custom-post.php:237
+msgid "Edit Testimonial Category"
+msgstr ""
+
+#: ../photography-custom-post.php:238
+msgid "Update Testimonial Category"
+msgstr ""
+
+#: ../photography-custom-post.php:239
+msgid "Add New Testimonial Category"
+msgstr ""
+
+#: ../photography-custom-post.php:240
+msgid "New Testimonial Category Name"
+msgstr ""
+
+#: ../photography-custom-post.php:265
+msgid "Add New Client"
+msgstr ""
+
+#: ../photography-custom-post.php:266
+msgid "Edit Client"
+msgstr ""
+
+#: ../photography-custom-post.php:267
+msgid "New Client"
+msgstr ""
+
+#: ../photography-custom-post.php:268
+msgid "View Client"
+msgstr ""
+
+#: ../photography-custom-post.php:269
+msgid "Search Client"
+msgstr ""
+
+#: ../photography-custom-post.php:270
+msgid "No Client found"
+msgstr ""
+
+#: ../photography-custom-post.php:271
+msgid "No Client found in Trash"
+msgstr ""
+
+#: ../photography-custom-post.php:298
+msgid "Add New Team Member"
+msgstr ""
+
+#: ../photography-custom-post.php:299
+msgid "Edit Team Member"
+msgstr ""
+
+#: ../photography-custom-post.php:300
+msgid "New Team Member"
+msgstr ""
+
+#: ../photography-custom-post.php:301
+msgid "View Team Member"
+msgstr ""
+
+#: ../photography-custom-post.php:302
+msgid "Search Team Members"
+msgstr ""
+
+#: ../photography-custom-post.php:303
+msgid "No Team Member found"
+msgstr ""
+
+#: ../photography-custom-post.php:304
+msgid "No Team Member found in Trash"
+msgstr ""
+
+#: ../photography-custom-post.php:326
+msgid "Team Service Categories"
+msgstr ""
+
+#: ../photography-custom-post.php:327
+msgid "All Team Categories"
+msgstr ""
+
+#: ../photography-custom-post.php:328
+msgid "Parent Team Category"
+msgstr ""
+
+#: ../photography-custom-post.php:329
+msgid "Parent Team Category:"
+msgstr ""
+
+#: ../photography-custom-post.php:330
+msgid "Edit Team Category"
+msgstr ""
+
+#: ../photography-custom-post.php:331
+msgid "Update Team Category"
+msgstr ""
+
+#: ../photography-custom-post.php:332
+msgid "Add New Team Category"
+msgstr ""
+
+#: ../photography-custom-post.php:333
+msgid "New Team Category Name"
+msgstr ""
+
+#: ../photography-custom-post.php:357
+msgid "Add New Pricing"
+msgstr ""
+
+#: ../photography-custom-post.php:358
+msgid "Edit Pricing"
+msgstr ""
+
+#: ../photography-custom-post.php:359
+msgid "New Pricing"
+msgstr ""
+
+#: ../photography-custom-post.php:360
+msgid "View Pricing"
+msgstr ""
+
+#: ../photography-custom-post.php:361
+msgid "Search Pricings"
+msgstr ""
+
+#: ../photography-custom-post.php:362
+msgid "No Pricing found"
+msgstr ""
+
+#: ../photography-custom-post.php:363
+msgid "No Pricing found in Trash"
+msgstr ""
+
+#: ../photography-custom-post.php:385
+msgid "Pricing Service Categories"
+msgstr ""
+
+#: ../photography-custom-post.php:386
+msgid "All Pricing Categories"
+msgstr ""
+
+#: ../photography-custom-post.php:387
+msgid "Parent Pricing Category"
+msgstr ""
+
+#: ../photography-custom-post.php:388
+msgid "Parent Pricing Category:"
+msgstr ""
+
+#: ../photography-custom-post.php:389
+msgid "Edit Pricing Category"
+msgstr ""
+
+#: ../photography-custom-post.php:390
+msgid "Update Pricing Category"
+msgstr ""
+
+#: ../photography-custom-post.php:391
+msgid "Add New Pricing Category"
+msgstr ""
+
+#: ../photography-custom-post.php:392
+msgid "New Pricing Category Name"
+msgstr ""
+
+#: ../photography-custom-post.php:413
+msgid "Thumbnail"
+msgstr ""
+
+#: ../tg-contentbuilder.php:671 ../tg-contentbuilder.php:791
+#: ../tg-shortcode.php:808 ../tg-shortcode.php:951
+msgid "Purchase"
+msgstr ""
+
+#: ../tg-contentbuilder.php:3988 ../tg-contentbuilder.php:4215
+msgid "In"
+msgstr ""
+
+#: ../tg-contentbuilder.php:6190 ../tg-contentbuilder.php:6191
+#: ../tg-contentbuilder.php:6439 ../tg-contentbuilder.php:6440
+msgid "Name *"
+msgstr ""
+
+#: ../tg-contentbuilder.php:6198 ../tg-contentbuilder.php:6199
+#: ../tg-contentbuilder.php:6447 ../tg-contentbuilder.php:6448
+msgid "Email *"
+msgstr ""
+
+#: ../tg-contentbuilder.php:6206 ../tg-contentbuilder.php:6207
+#: ../tg-contentbuilder.php:6455 ../tg-contentbuilder.php:6456
+msgid "Message *"
+msgstr ""
+
+#: ../tg-contentbuilder.php:6214 ../tg-contentbuilder.php:6215
+#: ../tg-contentbuilder.php:6463 ../tg-contentbuilder.php:6464
+msgid "Address"
+msgstr ""
+
+#: ../tg-contentbuilder.php:6222 ../tg-contentbuilder.php:6223
+#: ../tg-contentbuilder.php:6471 ../tg-contentbuilder.php:6472
+msgid "Phone"
+msgstr ""
+
+#: ../tg-contentbuilder.php:6230 ../tg-contentbuilder.php:6231
+#: ../tg-contentbuilder.php:6479 ../tg-contentbuilder.php:6480
+msgid "Mobile"
+msgstr ""
+
+#: ../tg-contentbuilder.php:6238 ../tg-contentbuilder.php:6239
+#: ../tg-contentbuilder.php:6487 ../tg-contentbuilder.php:6488
+msgid "Company Name"
+msgstr ""
+
+#: ../tg-contentbuilder.php:6246 ../tg-contentbuilder.php:6247
+#: ../tg-contentbuilder.php:6495 ../tg-contentbuilder.php:6496
+msgid "Country"
+msgstr ""
+
+#: ../tg-contentbuilder.php:6276 ../tg-contentbuilder.php:6525
+msgid "Send"
+msgstr ""
+
+#: ../tg-shortcode.php:276
+msgid "Share On"
+msgstr ""
+
+#: ../tg-shortcode.php:853 ../tg-shortcode.php:996 ../tg-shortcode.php:2933
+msgid ""
+"Empty gallery item. Please make sure you have upload image to it or check "
+"the short code."
+msgstr ""
+
+#: ../tg-shortcode.php:1371 ../tg-shortcode.php:1648
+msgid ""
+"Empty portfolio item. Please make sure you have created portfolio item or "
+"check the short code."
+msgstr ""
+
+#: ../tg-shortcode.php:1437
+msgid "All"
+msgstr ""
+
+#: ../tg-shortcode.php:2214
+msgid "Go to top"
+msgstr ""
+
+#: ../tg-shortcode.php:2330
+msgid "Follow"
+msgstr ""
+
+#: ../gallery/tg-gallery.php:58
+msgid "Gallery Images"
+msgstr ""
+
+#: ../gallery/tg-gallery.php:100
+msgid "Allowed Files"
+msgstr ""
+
+#: ../gallery/tg-gallery.php:123
+msgid "Upload Image"
+msgstr ""
+
+#: ../gallery/tg-gallery.php:124
+msgid "Delete All Images"
+msgstr ""
+
+#: ../gallery/tg-gallery.php:131
+msgid "Remove"
+msgstr "Remove"
+
+#, fuzzy
+#~ msgid "Leave A Reply"
+#~ msgstr "Leave a Reply"
+
+#, fuzzy
+#~ msgid "Cancel"
+#~ msgstr "Leave a Reply"
+
+#, fuzzy
+#~ msgid "Cancel Reply"
+#~ msgstr "Leave a Reply"
