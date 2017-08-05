@@ -23,7 +23,10 @@ jQuery(document).ready(function(){
 		jQuery(document).setNav();
 	});
 	
-	jQuery(document).setiLightbox();
+	if(jQuery('#tg_lightbox_enable').val() != '')
+	{
+		jQuery(document).setiLightbox();
+	}
     
     jQuery('#menu_expand_wrapper a').on( 'click', function(){
     	jQuery('#menu_wrapper').fadeIn();
@@ -334,7 +337,7 @@ jQuery(document).ready(function(){
 	
 	jQueryblogcontainer.imagesLoaded( function(){
 	    reBlogLayout();
-	    $window.smartresize( reBlogLayout );
+	    //$window.smartresize( reBlogLayout );
 	});
     
     //Add to top button when scrolling

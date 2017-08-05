@@ -38,7 +38,11 @@ function showLoading()
 
 function hideLoading()
 {
-	jQuery.fancybox.hideLoading();
+	setTimeout(function(){
+		jQuery.fancybox.hideLoading();
+		jQuery('#wpwrap .fancybox-overlay').remove();
+		jQuery('#content_metabox .inside .fancybox-overlay').remove();
+	}, 1000);
 }
 
 function cancelContent(builderID)
@@ -943,6 +947,11 @@ function ppbBuildEdit()
 	    	jQuery(this).parent('li').remove();
 	    }
 	    
+	    if(jQuery("#content_builder_sort li").length)
+	    {
+		    jQuery("#ppb_remove_all").val(1);
+	    }
+	    
 	    //If in live mode reload preview frame
     	if(isLiveMode())
 		{
@@ -1100,7 +1109,7 @@ jQuery(document).ready(function(){
     	jQuery(this).addClass('nav-tab-active');
     	
     	jQuery('.rm_section').css('display', 'none');
-    	jQuery(jQuery(this).attr('href')).fadeIn();
+    	jQuery(jQuery(this).attr('href')).show();
     	jQuery('#current_tab').val(jQuery(this).attr('href'));
     	
     	return false;
@@ -1169,7 +1178,7 @@ jQuery(document).ready(function(){
 	}
 	else
 	{
-	    jQuery('div#pp_panel_general').css('display', 'block');
+	    jQuery('div#pp_panel_home').css('display', 'block');
 	}
     
     jQuery( ".pp_sortable" ).sortable({
@@ -1476,6 +1485,7 @@ jQuery(document).ready(function(){
 		e.preventDefault();
 		showLoading();
 		jQuery(this).addClass('inactive');
+		jQuery('#wpwrap').append('<div class="fancybox-overlay"></div>');
 		
 		//Save all content
 		ppbSaveAll();
@@ -1893,7 +1903,7 @@ jQuery(document).ready(function(){
         };
 
         jQuery.post(ajaxurl, data, function(response) {
-            jQuery('.import_message').html('<div class="import_message_success">All done. Note: You might want to also <a href="http://themes.themegoods2.com/photography/doc/import-demo-revolution-sliders/" target="_blank">import demo Revolution Sliders.</a></div>');
+            jQuery('.import_message').html('<div class="import_message_success">All done. Note: You might want to also <a href="http://themes.themegoods.com/photography/doc/import-demo-revolution-sliders/" target="_blank">import demo Revolution Sliders.</a></div>');
             //jQuery('.import_message').html('<div class="import_message_success">'+response+'</div>');
         });
 	});
@@ -1935,6 +1945,7 @@ jQuery(document).ready(function(){
 	jQuery('#ppb_live').on( 'click', function(e){
 		jQuery(this).hide();
 		jQuery('#ppb_classic').css('display', 'inline-block');
+		jQuery('#ppb_refresh').css('display', 'inline-block');
 		jQuery('#ppb_page_content').addClass('live');
 		jQuery('#ppb_open_dev_bar').addClass('active');
 		jQuery('body').addClass('ppb_live');
@@ -1956,6 +1967,7 @@ jQuery(document).ready(function(){
 	
 	jQuery('#ppb_classic').on( 'click', function(e){
 		jQuery(this).hide();
+		jQuery('#ppb_refresh').hide();
 		jQuery('#ppb_live').css('display', 'inline-block');
 		jQuery('#ppb_page_content').removeClass('live');
 		jQuery('body').removeClass('ppb_live');
@@ -1968,6 +1980,10 @@ jQuery(document).ready(function(){
 		jQuery('#ppb_preview_page').removeClass('active');
 		jQuery('#content_builder_classic_wrapper').removeClass('hide');
 		jQuery('#ppb_live_preview_frame_wrapper').removeClass('expand');
+	});
+	
+	jQuery('#ppb_refresh').on( 'click', function(e){
+		ppbReloadPreview();
 	});
 	
 	jQuery('#ppb_open_dev_bar').on( 'click', function(e){

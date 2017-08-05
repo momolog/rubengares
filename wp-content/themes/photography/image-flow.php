@@ -8,9 +8,6 @@ $all_photo_arr = array();
 if(isset($_GET['gallery_id']) OR !empty($_GET['gallery_id']))
 {
 	$all_photo_arr = get_post_meta($_GET['gallery_id'], 'wpsimplegallery_gallery', true);
-	
-	//Get global gallery sorting
-	$all_photo_arr = photography_resort_gallery_img($all_photo_arr);
 }
 
 header("Content-type: text/xml");
@@ -42,7 +39,7 @@ foreach($all_photo_arr as $photo_id)
 			$image_caption.= '<br/><a href="'.esc_url($photography_purchase_url).'" class="button ghost"><i class="fa fa-shopping-cart marginright"></i>'.esc_html__('Purchase', 'photography-translation' ).'</a>';
 		}
 	
-		echo '<caption>'.esc_attr($image_caption).'</caption>';
+		echo '<caption>'.esc_attr(htmlspecialchars($image_caption)).'</caption>';
 	}
 	else
 	{

@@ -87,17 +87,18 @@ wp_enqueue_script("photography-custom-fullpage", get_template_directory_uri()."/
 			}
 			
 			$content_class = 'even';
-	        if($key%2!=0)
-	        {
-		        $content_class = 'odd';
-	        }
-	        else
-	        {
-		        $content_class = 'even';
-	        }
 	        
 		    if(!empty($image_url[0]))
 		    {
+		    	if($key%2!=0)
+		        {
+			        $content_class = 'odd';
+		        }
+		        else
+		        {
+			        $content_class = 'even';
+		        }
+	        
 		    	$portfolio_type = get_post_meta($portfolio_ID, 'portfolio_type', true);
 				$portfolio_video_id = get_post_meta($portfolio_ID, 'portfolio_video_id', true);
 		?>	
@@ -110,7 +111,7 @@ wp_enqueue_script("photography-custom-fullpage", get_template_directory_uri()."/
 		    					<?php the_excerpt(); ?>
 		    				</div>
 							<h1><?php the_title(); ?></h1>
-							<hr class="title_break left">
+							<hr class="title_break left"><br/>
 							<?php 
 								if(THEMEDEMO)
 								{
@@ -186,9 +187,9 @@ wp_enqueue_script("photography-custom-fullpage", get_template_directory_uri()."/
 		    	</div>
 		    </div>
 		<?php
+				$key++;
 		    }
 
-	    $key++;
 	    endwhile; endif;	
 	?>
 	

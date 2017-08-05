@@ -1358,6 +1358,7 @@ function photography_custom_setting( $controls ) {
 		'post_date_old' => 'By Oldest',
 		'rand' => 'By Random',
 		'title' => 'By Title',
+		'filename' => 'By File Name',
 	);
 	
 	$tg_portfolio_filterable_sort = array(
@@ -1415,6 +1416,7 @@ function photography_custom_setting( $controls ) {
 	);
 	
 	$tg_lightbox_thumbnails = array(
+		'no_thumbnail' => 'No Thumbnail',
 		'horizontal' => 'Horizontal Align',
 		'vertical' => 'Vertical Align',
 	);
@@ -3296,6 +3298,16 @@ function photography_custom_setting( $controls ) {
     );
     
     $controls[] = array(
+        'type'     => 'toggle',
+        'setting'  => 'tg_lightbox_enable',
+        'label'    => esc_html__('Enable theme default lightbox', 'photography-translation' ),
+        'description' => esc_html__('Check if you want to enable theme default lightbox for gallery images', 'photography-translation' ),
+        'section'  => 'gallery_lightbox',
+        'default'  => 1,
+	    'priority' => 1,
+    );
+    
+    $controls[] = array(
         'type'     => 'select',
         'setting'  => 'tg_lightbox_skin',
         'label'    => esc_html__('Select lightbox skin color', 'photography-translation' ),
@@ -3313,7 +3325,7 @@ function photography_custom_setting( $controls ) {
         'description' => esc_html__('Check if you want to display image caption under the image in lightbox mode', 'photography-translation' ),
         'section'  => 'gallery_lightbox',
         'default'  => 1,
-	    'priority' => 2,
+	    'priority' => 1,
     );
     
     $controls[] = array(
@@ -3323,7 +3335,7 @@ function photography_custom_setting( $controls ) {
         'description' => esc_html__('Check if you want to display image caption under the image in lightbox mode', 'photography-translation' ),
         'section'  => 'gallery_lightbox',
         'default'  => 1,
-	    'priority' => 2,
+	    'priority' => 1,
     );
     
     $controls[] = array(

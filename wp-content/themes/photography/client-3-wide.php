@@ -46,6 +46,11 @@ get_template_part("/templates/template-header");
 <div class="inner">
 
 	<div class="inner_wrapper nopadding">
+		
+<?php
+	if(!post_password_required())
+	{
+?>
 	
 	<?php
 	    if(!empty($post->post_content) && empty($term))
@@ -111,6 +116,16 @@ get_template_part("/templates/template-header");
 	</div>
 	
 	</div>
+<?php
+}
+//if password protected
+else
+{
+?>
+<div class="standard_wrapper"><br class="clear"/><br/><?php the_content(); ?></div><br class="clear"/><br/>
+<?php	
+}
+?>
 
 </div>
 </div>

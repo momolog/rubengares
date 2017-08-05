@@ -93,6 +93,9 @@ $tg_menu_layout = photography_menu_layout();
 		$tg_lightbox_opacity = kirki_get_option('tg_lightbox_opacity');
 		$tg_lightbox_opacity = $tg_lightbox_opacity/100;
 		
+		//Get lightbox setting
+		$tg_lightbox_enable = kirki_get_option('tg_lightbox_enable');
+		
 		//Get sticky menu color scheme
 		$tg_fixed_menu_color = kirki_get_option('tg_fixed_menu_color');
 	?>
@@ -112,6 +115,7 @@ $tg_menu_layout = photography_menu_layout();
 	<input type="hidden" id="tg_lightbox_skin" name="tg_lightbox_skin" value="<?php echo esc_attr($tg_lightbox_skin); ?>"/>
 	<input type="hidden" id="tg_lightbox_thumbnails" name="tg_lightbox_thumbnails" value="<?php echo esc_attr($tg_lightbox_thumbnails); ?>"/>
 	<input type="hidden" id="tg_lightbox_opacity" name="tg_lightbox_opacity" value="<?php echo esc_attr($tg_lightbox_opacity); ?>"/>
+	<input type="hidden" id="tg_lightbox_enable" name="tg_lightbox_enable" value="<?php echo esc_attr($tg_lightbox_enable); ?>"/>
 	<input type="hidden" id="tg_fixed_menu_color" name="tg_fixed_menu_color" value="<?php echo esc_attr($tg_fixed_menu_color); ?>"/>
 	
 	<?php

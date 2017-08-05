@@ -44,7 +44,7 @@ if (have_posts()) : while (have_posts()) : the_post();
 
 	echo '<img>';
 	echo '<src>'.$image_url[0].'</src>';
-	echo '<caption>'.esc_attr($portfolio_content).'</caption>';
+	echo '<caption>'.esc_attr(htmlspecialchars($portfolio_content)).'</caption>';
 	
 	$portfolio_type = get_post_meta($portfolio_ID, 'portfolio_type', true);
 	$portfolio_video_id = get_post_meta($portfolio_ID, 'portfolio_video_id', true);

@@ -437,7 +437,7 @@ function photography_page_save_postdata( $post_id ) {
 			}
 		}
 		//If content builder is empty
-		else
+		else if(isset($_POST['ppb_remove_all']) && !empty($_POST['ppb_remove_all']))
 		{
 			photography_page_update_custom_meta($post_id, '', 'ppb_form_data_order');
 		}

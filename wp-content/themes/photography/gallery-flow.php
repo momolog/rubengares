@@ -65,9 +65,6 @@ wp_enqueue_script("photography-script-flow-gallery", get_template_directory_uri(
 <?php
 $tg_full_image_caption = kirki_get_option('tg_full_image_caption');
 $all_photo_arr = get_post_meta($current_page_id, 'wpsimplegallery_gallery', true);
-	
-//Get global gallery sorting
-$all_photo_arr = photography_resort_gallery_img($all_photo_arr);
 
 foreach($all_photo_arr as $key => $photo)
 {

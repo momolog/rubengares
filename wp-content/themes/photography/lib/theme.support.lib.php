@@ -9,11 +9,95 @@ if ( function_exists( 'add_theme_support' ) ) {
 }
 
 if ( function_exists( 'add_image_size' ) ) { 
-	add_image_size( 'photography-gallery-grid', 705, 529, true );
-	add_image_size( 'photography-gallery-grid-large', 987, 740, true );
-	add_image_size( 'photography-gallery-masonry', 705, 9999, false );
-	add_image_size( 'photography-gallery-striped', 270, 690, true );
-	add_image_size( 'photography-blog', 960, 636, true );
+	//Setup image grid dimensions
+	$pp_gallery_grid_image_width = get_option('pp_gallery_grid_image_width');
+	if(empty($pp_gallery_grid_image_width))
+	{
+		$pp_gallery_grid_image_width = 705;
+	}
+	$pp_gallery_grid_image_height = get_option('pp_gallery_grid_image_height');
+	if(empty($pp_gallery_grid_image_height))
+	{
+		$pp_gallery_grid_image_height = 529;
+	}
+	$image_crop = true;
+	if($pp_gallery_grid_image_height == 9999)
+	{
+		$image_crop = false;
+	}
+	add_image_size( 'photography-gallery-grid', intval($pp_gallery_grid_image_width), intval($pp_gallery_grid_image_height), $image_crop );
+	
+	//Setup image grid large dimensions
+	$pp_gallery_grid_large_image_width = get_option('pp_gallery_grid_large_image_width');
+	if(empty($pp_gallery_grid_large_image_width))
+	{
+		$pp_gallery_grid_large_image_width = 987;
+	}
+	$pp_gallery_grid_large_image_height = get_option('pp_gallery_grid_large_image_height');
+	if(empty($pp_gallery_grid_large_image_height))
+	{
+		$pp_gallery_grid_large_image_height = 740;
+	}
+	$image_crop = true;
+	if($pp_gallery_grid_large_image_height == 9999)
+	{
+		$image_crop = false;
+	}
+	add_image_size( 'photography-gallery-grid-large', intval($pp_gallery_grid_large_image_width), intval($pp_gallery_grid_large_image_height), $image_crop );
+	
+	//Setup image masonry dimensions
+	$pp_gallery_masonry_image_width = get_option('pp_gallery_masonry_image_width');
+	if(empty($pp_gallery_masonry_image_width))
+	{
+		$pp_gallery_masonry_image_width = 705;
+	}
+	$pp_gallery_masonry_image_height = get_option('pp_gallery_masonry_image_height');
+	if(empty($pp_gallery_masonry_image_height))
+	{
+		$pp_gallery_masonry_image_height = 9999;
+	}
+	$image_crop = true;
+	if($pp_gallery_masonry_image_height == 9999)
+	{
+		$image_crop = false;
+	}
+	add_image_size( 'photography-gallery-masonry', intval($pp_gallery_masonry_image_width), intval($pp_gallery_masonry_image_height), $image_crop );
+	
+	//Setup image striped dimensions
+	$pp_gallery_striped_image_width = get_option('pp_gallery_striped_image_width');
+	if(empty($pp_gallery_striped_image_width))
+	{
+		$pp_gallery_striped_image_width = 270;
+	}
+	$pp_gallery_striped_image_height = get_option('pp_gallery_striped_image_height');
+	if(empty($pp_gallery_striped_image_height))
+	{
+		$pp_gallery_striped_image_height = 690;
+	}
+	$image_crop = true;
+	if($pp_gallery_striped_image_height == 9999)
+	{
+		$image_crop = false;
+	}
+	add_image_size( 'photography-gallery-striped', intval($pp_gallery_striped_image_width), intval($pp_gallery_striped_image_height), $image_crop );
+	
+	//Setup image blog dimensions
+	$pp_blog_image_width = get_option('pp_blog_image_width');
+	if(empty($pp_blog_image_width))
+	{
+		$pp_blog_image_width = 960;
+	}
+	$pp_blog_image_height = get_option('pp_blog_image_height');
+	if(empty($pp_blog_image_height))
+	{
+		$pp_blog_image_height = 636;
+	}
+	$image_crop = true;
+	if($pp_blog_image_height == 9999)
+	{
+		$image_crop = false;
+	}
+	add_image_size( 'photography-blog', intval($pp_blog_image_width), intval($pp_blog_image_height), $image_crop );
 }
 
 add_action( 'after_setup_theme', 'photography_woocommerce_support' );

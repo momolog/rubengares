@@ -145,6 +145,15 @@ jQuery(document).ready(function(){
 	       	api.nextSlide();
 	   	}
 	});
+	
+	var isDisableDragging = jQuery('#pp_enable_dragging').val();
+	
+	if(isDisableDragging!='')
+	{
+		jQuery("img").mousedown(function(){
+		    return false;
+		});
+	}
 });
 <?php
 }

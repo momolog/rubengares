@@ -42,7 +42,7 @@
 			return this;
 		
 		var default_options = {
-			'mode': 'tmce',
+			'mode': 'html',
 			'mceInit' : {
 				"theme": "modern",
 				"skin": "lightgray",

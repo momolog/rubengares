@@ -159,19 +159,38 @@ jQuery.fn.setNav = function(){
 }
 
 jQuery.fn.setiLightbox = function(){
-	var iLightboxapi = jQuery('a.fancy-gallery, .pp_gallery a, .img_frame, .fancy_video, .lightbox_vimeo, .lightbox_youtube').iLightBox({
-		skin: jQuery('#tg_lightbox_skin').val(),
-		path: jQuery('#tg_lightbox_thumbnails').val(),
-		type: 'inline, video, image',
-		maxScale: 1,
-	  	controls: {
-		  slideshow: true,
-		  arrows: true
-		},
-		overlay: {
-		  opacity: jQuery('#tg_lightbox_opacity').val()
-		}
-	});
+	if(jQuery('#tg_lightbox_thumbnails').val() == 'no_thumbnail')
+	{
+		var iLightboxapi = jQuery('a.fancy-gallery, .pp_gallery a, .img_frame, .fancy_video, .lightbox_vimeo, .lightbox_youtube, .woocommerce-product-gallery__image a').iLightBox({
+			skin: jQuery('#tg_lightbox_skin').val(),
+			type: 'inline, video, image',
+			maxScale: 1,
+		  	controls: {
+			  slideshow: true,
+			  arrows: true,
+			  thumbnail : false
+			},
+			overlay: {
+			  opacity: jQuery('#tg_lightbox_opacity').val()
+			}
+		});
+	}
+	else
+	{
+		var iLightboxapi = jQuery('a.fancy-gallery, .pp_gallery a, .img_frame, .fancy_video, .lightbox_vimeo, .lightbox_youtube, .woocommerce-product-gallery__image a').iLightBox({
+			skin: jQuery('#tg_lightbox_skin').val(),
+			path: jQuery('#tg_lightbox_thumbnails').val(),
+			type: 'inline, video, image',
+			maxScale: 1,
+		  	controls: {
+			  slideshow: true,
+			  arrows: true
+			},
+			overlay: {
+			  opacity: jQuery('#tg_lightbox_opacity').val()
+			}
+		});
+	}
 	
 	iLightboxapi.refresh();
 }

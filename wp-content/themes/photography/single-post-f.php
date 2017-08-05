@@ -207,44 +207,13 @@ if (have_posts()) : while (have_posts()) : the_post();
 					default:
 		    ?>
 				    <div class="post_header">
-				    	<?php
-						    if(empty($tg_blog_header_bg))
-						    {
-						?>
-					    	<div class="post_header_title">
-							    <h5><?php the_title(); ?></h5>
-							    <div class="post_detail">
-								    <?php echo date_i18n(THEMEDATEFORMAT, get_the_time('U')); ?>
-								    <?php
-								    	//Get Post's Categories
-								    	$post_categories = wp_get_post_categories($post->ID);
-								    	if(!empty($post_categories))
-								    	{
-								    ?>
-								    	<?php echo esc_html_e('In', 'photography-translation' ); ?>
-								    <?php
-								        	foreach($post_categories as $c)
-								        	{
-								        		$cat = get_category( $c );
-								    ?>
-								        	<a href="<?php echo esc_url(get_category_link($cat->term_id)); ?>"><?php echo esc_html($cat->name); ?></a>
-								    <?php
-								        	}
-								        }
-								    ?>
-								</div>
-							    <br class="clear"/>
-					    	</div>
-						    <?php
-								}
-							?>
 				    
 				    <?php
 				    	the_content();
 						wp_link_pages();
 				    ?>
 				    
-			    </div>
+					</div>
 		    <?php
 		    		break;
 		    	}

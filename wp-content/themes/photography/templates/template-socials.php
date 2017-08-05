@@ -21,7 +21,7 @@
     		if(!empty($pp_twitter_username))
     		{
     	?>
-    	<li class="twitter"><a <?php if(!empty($tg_topbar_social_link)) { ?>target="_blank"<?php } ?> href="http://twitter.com/<?php echo esc_attr($pp_twitter_username); ?>"><i class="fa fa-twitter"></i></a></li>
+    	<li class="twitter"><a <?php if(!empty($tg_topbar_social_link)) { ?>target="_blank"<?php } ?> href="//twitter.com/<?php echo esc_attr($pp_twitter_username); ?>"><i class="fa fa-twitter"></i></a></li>
     	<?php
     		}
     	?>
@@ -31,7 +31,7 @@
     		if(!empty($pp_flickr_username))
     		{
     	?>
-    	<li class="flickr"><a <?php if(!empty($tg_topbar_social_link)) { ?>target="_blank"<?php } ?> title="Flickr" href="http://flickr.com/people/<?php echo esc_attr($pp_flickr_username); ?>"><i class="fa fa-flickr"></i></a></li>
+    	<li class="flickr"><a <?php if(!empty($tg_topbar_social_link)) { ?>target="_blank"<?php } ?> title="Flickr" href="//flickr.com/people/<?php echo esc_attr($pp_flickr_username); ?>"><i class="fa fa-flickr"></i></a></li>
     	<?php
     		}
     	?>
@@ -51,7 +51,7 @@
     		if(!empty($pp_vimeo_username))
     		{
     	?>
-    	<li class="vimeo"><a <?php if(!empty($tg_topbar_social_link)) { ?>target="_blank"<?php } ?> title="Vimeo" href="http://vimeo.com/<?php echo esc_attr($pp_vimeo_username); ?>"><i class="fa fa-vimeo-square"></i></i></a></li>
+    	<li class="vimeo"><a <?php if(!empty($tg_topbar_social_link)) { ?>target="_blank"<?php } ?> title="Vimeo" href="//vimeo.com/<?php echo esc_attr($pp_vimeo_username); ?>"><i class="fa fa-vimeo-square"></i></i></a></li>
     	<?php
     		}
     	?>
@@ -61,7 +61,7 @@
     		if(!empty($pp_tumblr_username))
     		{
     	?>
-    	<li class="tumblr"><a <?php if(!empty($tg_topbar_social_link)) { ?>target="_blank"<?php } ?> title="Tumblr" href="http://<?php echo esc_attr($pp_tumblr_username); ?>.tumblr.com"><i class="fa fa-tumblr"></i></a></li>
+    	<li class="tumblr"><a <?php if(!empty($tg_topbar_social_link)) { ?>target="_blank"<?php } ?> title="Tumblr" href="//<?php echo esc_attr($pp_tumblr_username); ?>.tumblr.com"><i class="fa fa-tumblr"></i></a></li>
     	<?php
     		}
     	?>
@@ -81,7 +81,7 @@
     		if(!empty($pp_dribbble_username))
     		{
     	?>
-    	<li class="dribbble"><a <?php if(!empty($tg_topbar_social_link)) { ?>target="_blank"<?php } ?> title="Dribbble" href="http://dribbble.com/<?php echo esc_attr($pp_dribbble_username); ?>"><i class="fa fa-dribbble"></i></a></li>
+    	<li class="dribbble"><a <?php if(!empty($tg_topbar_social_link)) { ?>target="_blank"<?php } ?> title="Dribbble" href="//dribbble.com/<?php echo esc_attr($pp_dribbble_username); ?>"><i class="fa fa-dribbble"></i></a></li>
     	<?php
     		}
     	?>
@@ -101,7 +101,7 @@
             if(!empty($pp_pinterest_username))
             {
         ?>
-        <li class="pinterest"><a <?php if(!empty($tg_topbar_social_link)) { ?>target="_blank"<?php } ?> title="Pinterest" href="http://pinterest.com/<?php echo esc_attr($pp_pinterest_username); ?>"><i class="fa fa-pinterest"></i></a></li>
+        <li class="pinterest"><a <?php if(!empty($tg_topbar_social_link)) { ?>target="_blank"<?php } ?> title="Pinterest" href="//pinterest.com/<?php echo esc_attr($pp_pinterest_username); ?>"><i class="fa fa-pinterest"></i></a></li>
         <?php
             }
         ?>
@@ -111,7 +111,7 @@
         	if(!empty($pp_instagram_username))
         	{
         ?>
-        <li class="instagram"><a <?php if(!empty($tg_topbar_social_link)) { ?>target="_blank"<?php } ?> title="Instagram" href="http://instagram.com/<?php echo esc_attr(strtolower($pp_instagram_username)); ?>"><i class="fa fa-instagram"></i></a></li>
+        <li class="instagram"><a <?php if(!empty($tg_topbar_social_link)) { ?>target="_blank"<?php } ?> title="Instagram" href="//instagram.com/<?php echo esc_attr(strtolower($pp_instagram_username)); ?>"><i class="fa fa-instagram"></i></a></li>
         <?php
         	}
         ?>
@@ -121,7 +121,7 @@
         	if(!empty($pp_behance_username))
         	{
         ?>
-        <li class="behance"><a <?php if(!empty($tg_topbar_social_link)) { ?>target="_blank"<?php } ?> title="Behance" href="http://behance.net/<?php echo esc_attr($pp_behance_username); ?>"><i class="fa fa-behance-square"></i></a></li>
+        <li class="behance"><a <?php if(!empty($tg_topbar_social_link)) { ?>target="_blank"<?php } ?> title="Behance" href="//behance.net/<?php echo esc_attr($pp_behance_username); ?>"><i class="fa fa-behance-square"></i></a></li>
         <?php
         	}
         ?>

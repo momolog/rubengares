@@ -27,7 +27,7 @@ get_header();
 ?>
 
 <div id="vimeo_bg">
-	<iframe frameborder="0" src="http://player.vimeo.com/video/<?php echo esc_attr($page_ft_vimeo); ?>?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1&amp;loop=1" webkitallowfullscreen="" allowfullscreen=""></iframe>
+	<iframe frameborder="0" src="//player.vimeo.com/video/<?php echo esc_attr($page_ft_vimeo); ?>?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1&amp;loop=1" webkitallowfullscreen="" allowfullscreen=""></iframe>
 </div>
 
 <?php

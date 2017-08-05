@@ -11,7 +11,7 @@ define("THEMEVERSION", $theme_obj['Version']);
 define("THEMEDEMOURL", $theme_obj['ThemeURI']);
 define("THEMEDATEFORMAT", get_option('date_format'));
 define("THEMETIMEFORMAT", get_option('time_format'));
-define("BUILDERDOCURL", 'http://themes.themegoods2.com/photography/doc/create-a-page-using-content-builder-2/');
+define("BUILDERDOCURL", 'http://themes.themegoods.com/photography/doc/create-a-page-using-content-builder-2/');
 
 //Get default WP uploads folder
 $wp_upload_arr = wp_upload_dir();
@@ -27,4 +27,16 @@ if(!is_dir(THEMEUPLOAD))
 $photography_google_fonts = array('tg_body_font', 'tg_header_font', 'tg_menu_font', 'tg_sidemenu_font', 'tg_sidebar_title_font', 'tg_button_font');
 
 global $photography_google_fonts;
+
+//Set page gallery ID
+function photography_set_page_gallery_id($new_value = '') {
+	global $photograhy_page_gallery_id;
+	$photograhy_page_gallery_id = $new_value;
+}
+
+//Get page gallery ID
+function photography_get_page_gallery_id() {
+	global $photograhy_page_gallery_id;
+	return $photograhy_page_gallery_id;
+}
 ?>

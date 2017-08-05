@@ -1395,6 +1395,11 @@
 	{
 		overflow: visible;
 	}
+	
+	.three_cols.gallery .element.double_size
+	{
+		width: 100%;
+	}
 }
 
 /* 

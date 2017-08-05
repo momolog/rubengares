@@ -18,9 +18,6 @@ function photography_register_sidebars()
 	    register_sidebar(array('id' => 'single-post-sidebar', 'name' => 'Single Post Sidebar', 'description' => 'The default sidebar for single post page'));
 	    
 	if ( function_exists('register_sidebar') )
-	    register_sidebar(array('id' => 'single-image-page-sidebar', 'name' => 'Single Image Page Sidebar', 'description' => 'The default sidebar for single attachment (image) page'));
-	    
-	if ( function_exists('register_sidebar') )
 	    register_sidebar(array('id' => 'archives-sidebar', 'name' => 'Archives Sidebar', 'description' => 'The default sidebar for archive page'));
 	    
 	if ( function_exists('register_sidebar') )

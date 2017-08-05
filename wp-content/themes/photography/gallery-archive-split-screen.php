@@ -76,17 +76,17 @@ wp_enqueue_script("photography-custom-fullpage", get_template_directory_uri()."/
 	        $permalink_url = get_permalink($gallery_ID);
 
 	        $content_class = 'even';
-	        if($key%2!=0)
-	        {
-		        $content_class = 'odd';
-	        }
-	        else
-	        {
-		        $content_class = 'even';
-	        }
 	        
 		    if(!empty($small_image_url[0]))
 		    {
+		    	if($key%2!=0)
+		        {
+			        $content_class = 'odd';
+		        }
+		        else
+		        {
+			        $content_class = 'even';
+		        }
 		?>	
 		    <div class="section gallery_archive">
 		    	<a href="<?php echo esc_url($permalink_url); ?>">
@@ -99,7 +99,7 @@ wp_enqueue_script("photography-custom-fullpage", get_template_directory_uri()."/
 		    					<?php the_excerpt(); ?>
 		    				</div>
 							<h1><?php the_title(); ?></h1>
-							<hr class="title_break left">
+							<hr class="title_break left"><br/>
 							<?php the_content(); ?>
 							<br/><br/>
 							<a href="<?php echo esc_url($permalink_url); ?>" class="button ghost"><?php esc_html_e('View Gallery', 'photography-translation' ); ?></a>
@@ -108,9 +108,9 @@ wp_enqueue_script("photography-custom-fullpage", get_template_directory_uri()."/
 		    	</div>
 		    </div>
 		<?php
+				$key++;
 		    }
 
-	    $key++;
 	    endwhile; endif;	
 	?>
 	

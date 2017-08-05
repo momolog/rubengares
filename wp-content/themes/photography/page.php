@@ -86,7 +86,7 @@ if(empty($page_show_title))
 	    if(!empty($tg_page_title_img_blur))
 	    {
 	?>
-	<div id="bg_blurred" style="background-image:url(<?php echo get_template_directory_uri().'/modules/blurred.php?src='.esc_url($pp_page_bg); ?>);"></div>
+	<div id="bg_blurred" style="background-image:url(<?php echo admin_url('admin-ajax.php').'?action=photography_blurred&src='.esc_url($pp_page_bg); ?>);"></div>
 	<?php
 	    }
 	?>

@@ -8,7 +8,7 @@
 
 $photography_page_gallery_id = get_post_meta($post->ID, 'page_gallery_id', true);
 $gallery_template = get_post_meta($photography_page_gallery_id, 'gallery_template', true);
-global $photography_page_gallery_id;
+photography_set_page_gallery_id($photography_page_gallery_id);
 
 if(!empty($photography_page_gallery_id))
 {

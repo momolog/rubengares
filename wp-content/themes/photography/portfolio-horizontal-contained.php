@@ -40,7 +40,7 @@ get_template_part("/templates/template-header");
 ?>
 
 <!-- Begin content -->
-<div id="page_content_wrapper" class="transparent horizontal">
+<div class="transparent horizontal">
 	<div id="horizontal_gallery">
 	<table id="horizontal_gallery_wrapper">
 	<tbody><tr>

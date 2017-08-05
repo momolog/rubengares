@@ -158,7 +158,7 @@
 			    		if(!empty($pp_twitter_username))
 			    		{
 			    	?>
-			    	<li class="twitter"><a <?php if(!empty($tg_footer_social_link)) { ?>target="_blank"<?php } ?> href="http://twitter.com/<?php echo esc_attr($pp_twitter_username); ?>"><i class="fa fa-twitter"></i></a></li>
+			    	<li class="twitter"><a <?php if(!empty($tg_footer_social_link)) { ?>target="_blank"<?php } ?> href="//twitter.com/<?php echo esc_attr($pp_twitter_username); ?>"><i class="fa fa-twitter"></i></a></li>
 			    	<?php
 			    		}
 			    	?>
@@ -168,7 +168,7 @@
 			    		if(!empty($pp_flickr_username))
 			    		{
 			    	?>
-			    	<li class="flickr"><a <?php if(!empty($tg_footer_social_link)) { ?>target="_blank"<?php } ?> title="Flickr" href="http://flickr.com/people/<?php echo esc_attr($pp_flickr_username); ?>"><i class="fa fa-flickr"></i></a></li>
+			    	<li class="flickr"><a <?php if(!empty($tg_footer_social_link)) { ?>target="_blank"<?php } ?> title="Flickr" href="//flickr.com/people/<?php echo esc_attr($pp_flickr_username); ?>"><i class="fa fa-flickr"></i></a></li>
 			    	<?php
 			    		}
 			    	?>
@@ -188,7 +188,7 @@
 			    		if(!empty($pp_vimeo_username))
 			    		{
 			    	?>
-			    	<li class="vimeo"><a <?php if(!empty($tg_footer_social_link)) { ?>target="_blank"<?php } ?> title="Vimeo" href="http://vimeo.com/<?php echo esc_attr($pp_vimeo_username); ?>"><i class="fa fa-vimeo-square"></i></a></li>
+			    	<li class="vimeo"><a <?php if(!empty($tg_footer_social_link)) { ?>target="_blank"<?php } ?> title="Vimeo" href="//vimeo.com/<?php echo esc_attr($pp_vimeo_username); ?>"><i class="fa fa-vimeo-square"></i></a></li>
 			    	<?php
 			    		}
 			    	?>
@@ -198,7 +198,7 @@
 			    		if(!empty($pp_tumblr_username))
 			    		{
 			    	?>
-			    	<li class="tumblr"><a <?php if(!empty($tg_footer_social_link)) { ?>target="_blank"<?php } ?> title="Tumblr" href="http://<?php echo esc_attr($pp_tumblr_username); ?>.tumblr.com"><i class="fa fa-tumblr"></i></a></li>
+			    	<li class="tumblr"><a <?php if(!empty($tg_footer_social_link)) { ?>target="_blank"<?php } ?> title="Tumblr" href="//<?php echo esc_attr($pp_tumblr_username); ?>.tumblr.com"><i class="fa fa-tumblr"></i></a></li>
 			    	<?php
 			    		}
 			    	?>
@@ -218,7 +218,7 @@
 			    		if(!empty($pp_dribbble_username))
 			    		{
 			    	?>
-			    	<li class="dribbble"><a <?php if(!empty($tg_footer_social_link)) { ?>target="_blank"<?php } ?> title="Dribbble" href="http://dribbble.com/<?php echo esc_attr($pp_dribbble_username); ?>"><i class="fa fa-dribbble"></i></a></li>
+			    	<li class="dribbble"><a <?php if(!empty($tg_footer_social_link)) { ?>target="_blank"<?php } ?> title="Dribbble" href="//dribbble.com/<?php echo esc_attr($pp_dribbble_username); ?>"><i class="fa fa-dribbble"></i></a></li>
 			    	<?php
 			    		}
 			    	?>
@@ -238,7 +238,7 @@
 			            if(!empty($pp_pinterest_username))
 			            {
 			        ?>
-			        <li class="pinterest"><a <?php if(!empty($tg_footer_social_link)) { ?>target="_blank"<?php } ?> title="Pinterest" href="http://pinterest.com/<?php echo esc_attr($pp_pinterest_username); ?>"><i class="fa fa-pinterest"></i></a></li>
+			        <li class="pinterest"><a <?php if(!empty($tg_footer_social_link)) { ?>target="_blank"<?php } ?> title="Pinterest" href="//pinterest.com/<?php echo esc_attr($pp_pinterest_username); ?>"><i class="fa fa-pinterest"></i></a></li>
 			        <?php
 			            }
 			        ?>
@@ -248,7 +248,7 @@
 			        	if(!empty($pp_instagram_username))
 			        	{
 			        ?>
-			        <li class="instagram"><a <?php if(!empty($tg_footer_social_link)) { ?>target="_blank"<?php } ?> title="Instagram" href="http://instagram.com/<?php echo esc_attr($pp_instagram_username); ?>"><i class="fa fa-instagram"></i></a></li>
+			        <li class="instagram"><a <?php if(!empty($tg_footer_social_link)) { ?>target="_blank"<?php } ?> title="Instagram" href="//instagram.com/<?php echo esc_attr($pp_instagram_username); ?>"><i class="fa fa-instagram"></i></a></li>
 			        <?php
 			        	}
 			        ?>
@@ -258,7 +258,7 @@
 			        	if(!empty($pp_behance_username))
 			        	{
 			        ?>
-			        <li class="behance"><a <?php if(!empty($tg_footer_social_link)) { ?>target="_blank"<?php } ?> title="Behance" href="http://behance.net/<?php echo esc_attr($pp_behance_username); ?>"><i class="fa fa-behance-square"></i></a></li>
+			        <li class="behance"><a <?php if(!empty($tg_footer_social_link)) { ?>target="_blank"<?php } ?> title="Behance" href="//behance.net/<?php echo esc_attr($pp_behance_username); ?>"><i class="fa fa-behance-square"></i></a></li>
 			        <?php
 			        	}
 			        ?>
@@ -359,77 +359,77 @@
 				array(
 					'id'	=>	'white1', 
 					'title' => 'White Demo: Left Align Menu', 
-					'url' => 'http://themes.themegoods2.com/photography/demo1/'
+					'url' => 'http://themes.themegoods.com/photography/demo1/'
 				),
 				array(
 					'id'	=>	'white2', 
 					'title' => 'White Demo: Center Align Menu', 
-					'url' => 'http://themes.themegoods2.com/photography/demo1/home/home-creative-2/?menulayout=centeralign'
+					'url' => 'http://themes.themegoods.com/photography/demo1/home/home-creative-2/?menulayout=centeralign'
 				),
 				array(
 					'id'	=>	'white3', 
 					'title' => 'White Demo: With Top Bar', 
-					'url' => 'http://themes.themegoods2.com/photography/demo1/home/home-revolution-slider/?topbar=1'
+					'url' => 'http://themes.themegoods.com/photography/demo1/home/home-revolution-slider/?topbar=1'
 				),
 				array(
 					'id'	=>	'white4', 
 					'title' => 'White Demo: Fullscreen Menu', 
-					'url' => 'http://themes.themegoods2.com/photography/demo1/home/home-10-masonry-gallery/?menulayout=hammenufull'
+					'url' => 'http://themes.themegoods.com/photography/demo1/home/home-10-masonry-gallery/?menulayout=hammenufull'
 				),
 				array(
 					'id'	=>	'white5', 
 					'title' => 'White Demo: Left Vertical Menu', 
-					'url' => 'http://themes.themegoods2.com/photography/demo1/pages/about-us-2/?menulayout=leftmenu'
+					'url' => 'http://themes.themegoods.com/photography/demo1/pages/about-us-2/?menulayout=leftmenu'
 				),
 				array(
 					'id'	=>	'white6', 
 					'title' => 'White Demo: Black Frame', 
-					'url' => 'http://themes.themegoods2.com/photography/demo1/home/home-15-animated-grid/?frame=1&amp;frame_color=black'
+					'url' => 'http://themes.themegoods.com/photography/demo1/home/home-15-animated-grid/?frame=1&amp;frame_color=black'
 				),
 				array(
 					'id'	=>	'white8', 
 					'title' => 'White Demo: Boxed Layout', 
-					'url' => 'http://themes.themegoods2.com/photography/demo1/gallery-archive/gallery-archive-4-columns-contained/?boxed=1'
+					'url' => 'http://themes.themegoods.com/photography/demo1/gallery-archive/gallery-archive-4-columns-contained/?boxed=1'
 				),
 				array(
 					'id'	=>	'dark1', 
 					'title' => 'Dark Demo: Left Align Menu', 
-					'url' => 'http://themes.themegoods2.com/photography/demo2/'
+					'url' => 'http://themes.themegoods.com/photography/demo2/'
 				),
 				array(
 					'id'	=>	'dark2', 
 					'title' => 'Dark Demo: Center Align Menu', 
-					'url' => 'http://themes.themegoods2.com/photography/demo2/home/home-creative-2/?menulayout=centeralign'
+					'url' => 'http://themes.themegoods.com/photography/demo2/home/home-creative-2/?menulayout=centeralign'
 				),
 				array(
 					'id'	=>	'dark3', 
 					'title' => 'Dark Demo: With Top Bar', 
-					'url' => 'http://themes.themegoods2.com/photography/demo2/home/home-revolution-slider/?topbar=1'
+					'url' => 'http://themes.themegoods.com/photography/demo2/home/home-revolution-slider/?topbar=1'
 				),
 				array(
 					'id'	=>	'dark4', 
 					'title' => 'Dark Demo: Fullscreen Menu', 
-					'url' => 'http://themes.themegoods2.com/photography/demo2/home/home-10-masonry-gallery/?menulayout=hammenufull'
+					'url' => 'http://themes.themegoods.com/photography/demo2/home/home-10-masonry-gallery/?menulayout=hammenufull'
 				),
 				array(
 					'id'	=>	'dark5', 
 					'title' => 'Dark Demo: Left Vertical Menu', 
-					'url' => 'http://themes.themegoods2.com/photography/demo2/pages/about-us-2/?menulayout=leftmenu'
+					'url' => 'http://themes.themegoods.com/photography/demo2/pages/about-us-2/?menulayout=leftmenu'
 				),
 				array(
 					'id'	=>	'dark6', 
 					'title' => 'Dark Demo: Black Frame', 
-					'url' => 'http://themes.themegoods2.com/photography/demo2/home/home-15-animated-grid/?frame=1&amp;frame_color=black'
+					'url' => 'http://themes.themegoods.com/photography/demo2/home/home-15-animated-grid/?frame=1&amp;frame_color=black'
 				),
 				array(
 					'id'	=>	'dark8', 
 					'title' => 'Dark Demo: Boxed Layout', 
-					'url' => 'http://themes.themegoods2.com/photography/demo2/gallery-archive/gallery-archive-4-columns-contained/?boxed=1'
+					'url' => 'http://themes.themegoods.com/photography/demo2/gallery-archive/gallery-archive-4-columns-contained/?boxed=1'
 				),
 				array(
 					'id'	=>	'customers', 
 					'title' => 'Customers Sites', 
-					'url' => 'http://themes.themegoods2.com/photography/landing/customers-sites/'
+					'url' => 'http://themes.themegoods.com/photography/landing/customers-sites/'
 				),
 			);
     	?>
@@ -458,8 +458,8 @@
     </div>
     <div id="option_btn">
     	<a href="javascript:;" class="demotip" title="Choose Theme Demo"><i class="fa fa-cog"></i></a>
-    	<a href="http://themes.themegoods2.com/photography/test/wp-content/plugins/gt-custom/gt-custom.php?gtlo" class="demotip" title="Test Customizer of Theme" target="_blank"><i class="fa fa-edit"></i></a>
-    	<a href="http://themes.themegoods2.com/photography/doc" class="demotip" title="Theme Documentation" target="_blank"><i class="fa fa-book"></i></a>
+    	<a href="http://themegoods.theme-demo.net/photographyresponsivephotographytheme" class="demotip" title="Try Before You Buy" target="_blank"><i class="fa fa-edit"></i></a>
+    	<a href="http://themes.themegoods.com/photography/doc" class="demotip" title="Theme Documentation" target="_blank"><i class="fa fa-book"></i></a>
     	<a href="http://themeforest.net/item/photography-responsive-photography-theme/13304399?ref=ThemeGoods&amp;license=regular&amp;open_purchase_for_item_id=13304399&amp;purchasable=source&amp;ref=ThemeGoods&amp;redirect_back=true" class="demotip" title="Purchase Theme" target="_blank"><i class="fa fa-shopping-basket"></i></a>
     </div>
 <?php

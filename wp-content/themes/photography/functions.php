@@ -1,7 +1,7 @@
 <?php
 /*
 Theme Name: Photography Theme
-Theme URI: http://themes.themegoods2.com/photography
+Theme URI: http://themes.themegoods.com/photography
 Author: ThemeGoods
 Author URI: http://themeforest.net/user/ThemeGoods
 License: GPLv2
@@ -36,9 +36,6 @@ require_once get_template_directory() . "/lib/sidebar.lib.php";
 
 //Setup theme custom widgets
 require_once get_template_directory() . "/lib/widgets.lib.php";
-
-//Setup auto update
-require_once get_template_directory() . "/lib/theme.update.lib.php";
 
 //Setup theme admin settings
 require_once get_template_directory() . "/lib/admin.lib.php";
@@ -593,15 +590,13 @@ function photography_admin()
 		
 		<div class="header_wrap">
 			<div style="float:left">
-			<h2><?php esc_html_e('Theme Setting', 'photography-translation' ); ?><span class="pp_version">v<?php echo THEMEVERSION; ?></span></h2>
+			<h2><?php esc_html_e('Theme Setting', 'photography-translation' ); ?><span class="pp_version">version <?php echo THEMEVERSION; ?></span></h2>
 			</div>
 			<div style="float:right;margin:32px 0 0 0">
-				<!-- input id="save_ppskin" name="save_ppskin" class="button secondary_button" type="submit" value="Save as Skin" / -->
-				<input class="button button-large" type="submit" value="<?php esc_html_e( 'Documentation', 'grandnews' ); ?>" onclick="window.open('http://themes.themegoods2.com/photography/doc/','_blank')"/>
-				<input id="save_ppsettings" name="save_ppsettings" class="button button-primary button-large" type="submit" value="<?php esc_html_e('Save All Changes', 'photography-translation' ); ?>" />
+				<input id="save_ppsettings" name="save_ppsettings" class="button button-primary button-large" type="submit" value="<?php esc_html_e('Save', 'photography-translation' ); ?>" />
 				<br/><br/>
 				<input type="hidden" name="action" value="save" />
-				<input type="hidden" name="current_tab" id="current_tab" value="#pp_panel_general" />
+				<input type="hidden" name="current_tab" id="current_tab" value="#pp_panel_home" />
 				<input type="hidden" name="pp_save_skin_flg" id="pp_save_skin_flg" value="" />
 				<input type="hidden" name="pp_save_skin_name" id="pp_save_skin_name" value="" />
 			</div>
@@ -623,7 +618,7 @@ function photography_admin()
 				
 				if($value['type'] == 'section')
 				{
-					if($value['name'] == 'General')
+					if($value['name'] == 'Home')
 					{
 						$active = 'nav-tab-active';
 					}
@@ -1070,7 +1065,7 @@ function photography_admin()
 	?>
 	
 		<div id="<?php echo esc_attr($value['id']); ?>_section" class="rm_input rm_checkbox"><label
-			for="<?php echo esc_attr($value['id']); ?>"><?php echo stripslashes($value['name']); ?></label><br/>
+			for="<?php echo esc_attr($value['id']); ?>"><?php echo stripslashes($value['name']); ?></label>
 	
 		<?php echo stripslashes($value['html']); ?>
 	
@@ -1944,8 +1939,15 @@ function photography_ppb_save_page_builder() {
 	    
 	    	foreach($ppb_form_item_arr as $key => $ppb_form_item)
 	    	{
-	    		update_post_meta($page_id, $ppb_form_item.'_data', $_POST[$ppb_form_item.'_data']);
-	    		update_post_meta($page_id, $ppb_form_item.'_size', $_POST[$ppb_form_item.'_size']);
+	    		if(isset($_POST[$ppb_form_item.'_data']) && $_POST[$ppb_form_item.'_data'] != 'undefined')
+		    	{
+	    			update_post_meta($page_id, $ppb_form_item.'_data', $_POST[$ppb_form_item.'_data']);
+	    		}
+	    		
+	    		if(isset($_POST[$ppb_form_item.'_size']) && $_POST[$ppb_form_item.'_size'] != 'undefined')
+	    		{
+	    			update_post_meta($page_id, $ppb_form_item.'_size', $_POST[$ppb_form_item.'_size']);
+	    		}
 	    	}
 	    }
 	}
@@ -2020,7 +2022,7 @@ function photography_import_demo_content() {
 		    		}
 		    		
 		    		$page_on_front = 3602; //Demo Homepage ID
-		    		$oldurl = 'http://themes.themegoods2.com/photography/demo1';
+		    		$oldurl = 'http://themes.themegoods.com/photography/demo1';
 		    	break;
 	    	}
 			
@@ -2555,33 +2557,6 @@ function photography_portfolio_grid() {
 	
 	$portfolio_order = 'ASC';
 	$portfolio_order_by = 'menu_order';
-	switch($portfolio_order)
-	{
-		case 'default':
-			$portfolio_order = 'ASC';
-			$portfolio_order_by = 'menu_order';
-		break;
-		
-		case 'newest':
-			$portfolio_order = 'DESC';
-			$portfolio_order_by = 'post_date';
-		break;
-		
-		case 'oldest':
-			$portfolio_order = 'ASC';
-			$portfolio_order_by = 'post_date';
-		break;
-		
-		case 'title':
-			$portfolio_order = 'ASC';
-			$portfolio_order_by = 'title';
-		break;
-		
-		case 'random':
-			$portfolio_order = 'ASC';
-			$portfolio_order_by = 'rand';
-		break;
-	}
 	
 	//Get portfolio items
 	$args = array(
@@ -2856,33 +2831,6 @@ function photography_portfolio_classic() {
 	
 	$portfolio_order = 'ASC';
 	$portfolio_order_by = 'menu_order';
-	switch($portfolio_order)
-	{
-		case 'default':
-			$portfolio_order = 'ASC';
-			$portfolio_order_by = 'menu_order';
-		break;
-		
-		case 'newest':
-			$portfolio_order = 'DESC';
-			$portfolio_order_by = 'post_date';
-		break;
-		
-		case 'oldest':
-			$portfolio_order = 'ASC';
-			$portfolio_order_by = 'post_date';
-		break;
-		
-		case 'title':
-			$portfolio_order = 'ASC';
-			$portfolio_order_by = 'title';
-		break;
-		
-		case 'random':
-			$portfolio_order = 'ASC';
-			$portfolio_order_by = 'rand';
-		break;
-	}
 	
 	//Get portfolio items
 	$args = array(
@@ -3102,6 +3050,11 @@ function photography_image_proofing() {
 			//Get current approved images
 			$current_images_approve = get_post_meta($gallery_id, 'gallery_images_approve', true);
 			
+			if(!is_array($current_images_approve))
+			{
+				$current_images_approve = array();
+			}
+			
 			if(!empty($current_images_approve))
 			{
 				if ( !in_array( $image_id, $current_images_approve ) ) {
@@ -3123,6 +3076,11 @@ function photography_image_proofing() {
 			//Get current approved images
 			$current_images_approve = get_post_meta($gallery_id, 'gallery_images_approve', true);
 			
+			if(!is_array($current_images_approve))
+			{
+				$current_images_approve = array();
+			}
+			
 			if(!empty($current_images_approve))
 			{
 				if (($key = array_search($image_id, $current_images_approve)) !== false) 
@@ -3141,6 +3099,35 @@ function photography_image_proofing() {
 /**
 *	End image proofing function
 **/
+
+
+add_action('wp_ajax_photography_blurred', 'photography_blurred');
+add_action('wp_ajax_nopriv_photography_blurred', 'photography_blurred');
+
+function photography_blurred() {
+	$do_blur = FALSE;
+	if(isset($_GET['src']) && !empty($_GET['src']))
+	{
+		$image_id = photography_get_image_id($_GET['src']);
+		$do_blur = TRUE;
+	}
+	$blurFactor = 5;
+	if(isset($_GET['blur_factor']) && is_numeric($_GET['blur_factor']))
+	{
+		$blurFactor = $_GET['blur_factor'];
+	}
+	
+	if($do_blur)
+	{
+		header('Content-Type: image/jpeg');
+		$image = imagecreatefromjpeg($_GET['src']);
+		$new_image = photography_blur($image,$blurFactor);
+		imagejpeg($new_image);
+		imagedestroy($new_image);
+	}
+
+	die();
+}
 
 
 if(THEMEDEMO)

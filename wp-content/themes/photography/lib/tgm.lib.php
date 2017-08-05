@@ -1,7 +1,7 @@
 <?php
 require_once get_template_directory() . "/modules/class-tgm-plugin-activation.php";
 add_action( 'tgmpa_register', 'photography_require_plugins' );
- 
+
 function photography_require_plugins() {
  
     $plugins = array(
@@ -10,14 +10,14 @@ function photography_require_plugins() {
 	        'slug'               => 'photography-custom-post',
 	        'source'             => get_template_directory() . '/lib/plugins/photography-custom-post.zip',
 	        'required'           => true, 
-	        'version'            => '2.1',
+	        'version'            => '3.7',
 	    ),
 	    array(
 	        'name'               => 'Revolution Slider',
 	        'slug'               => 'revslider',
 	        'source'             => get_template_directory() . '/lib/plugins/revslider.zip',
 	        'required'           => true, 
-	        'version'            => '5.2.6',
+	        'version'            => '5.4.5.1',
 	    ),
 	    array(
 	        'name'      => 'oAuth Twitter Feed for Developers',

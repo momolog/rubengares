@@ -586,7 +586,7 @@ function photography_shortcode_generator_options() {
 					'one_half' => 'One Half',
 					'one_half last' => 'One Half Last',
 					'one_third' => 'One Third',
-					'one_half last' => 'One Third Last',
+					'one_third last' => 'One Third Last',
 					'one_fourth' => 'One Fourth',
 					'one_fourth last' => 'One Fourth Last',
 				),

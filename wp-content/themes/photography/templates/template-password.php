@@ -87,7 +87,7 @@ if(!empty($gallery_password) && (!isset($_SESSION['gallery_page_'.$current_page_
 						    	}
 						    ?>
 					    	
-					        <p><strong><?php esc_html_e('To continue it please enter your password below', 'photography-translation' ); ?></strong></p><br/>
+					        <p><strong><?php esc_html_e('To continue please enter your password below', 'photography-translation' ); ?></strong></p><br/>
 					        	
 					        <?php 
 					            if(!empty($notice_text))

@@ -25,6 +25,8 @@ function photography_content_new_meta_box() {
 	<input type="hidden" name="ppb_enable" id="ppb_enable" <?php if(!empty($ppb_enable)) { ?>value="1"<?php } else { ?>value="0"<?php } ?> />
 	
 	<?php if(!empty($ppb_enable)) { ?>
+	<div class="fancybox-overlay"></div>
+	
 	<script>
 		jQuery(document).ready(function(){
 			jQuery('#postdivrich').hide();
@@ -32,6 +34,8 @@ function photography_content_new_meta_box() {
 			jQuery('#page_template').val('default');
 	      	jQuery('#page_template').attr('disabled','disabled');
 	      	jQuery('#content_metabox').addClass('visible');
+	      	
+	      	hideLoading();
 		});
 	</script>
 	<?php } ?>
@@ -41,6 +45,7 @@ function photography_content_new_meta_box() {
 	<input type="hidden" name="ppb_options" id="ppb_options" value=""/>
 	<input type="hidden" name="ppb_options_title" id="ppb_options_title" value=""/>
 	<input type="hidden" name="ppb_options_unsaved" id="ppb_options_unsaved" value=""/>
+	<input type="hidden" name="ppb_remove_all" id="ppb_remove_all" value=""/>
 	
 	<?php
 		$ppb_edit_mode = 'classic';
@@ -81,6 +86,8 @@ function photography_content_new_meta_box() {
 				<a id="ppb_live" title="<?php esc_html_e('Live View', 'photography-translation' ); ?>"><span class="dashicons dashicons-desktop"></span></a>
 				
 				<a id="ppb_classic" title="<?php esc_html_e('Classic View', 'photography-translation' ); ?>"><span class="dashicons dashicons-editor-insertmore"></span></span></a>
+				
+				<a id="ppb_refresh" title="<?php esc_html_e('Refresh', 'grandconference' ); ?>"><span class="dashicons dashicons-image-rotate"></span></a>
 				
 				<a id="ppb_add" title="<?php esc_html_e('Add Content', 'photography-translation' ); ?>"><span class="dashicons dashicons-plus"></span></a>
 				

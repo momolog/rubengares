@@ -18,7 +18,15 @@
 	$tg_blog_slider_cat = kirki_get_option('tg_blog_slider_cat');
 	if(!empty($tg_blog_slider_cat))
 	{
-	    $args['cat'] = $tg_blog_slider_cat;
+	    //Fix WPML issue with selected post category
+		if(!function_exists('icl_object_id'))
+		{
+			$args['cat'] = $tg_blog_slider_cat;
+		}
+		else
+		{
+	    	$args['cat'] = icl_object_id($tg_blog_slider_cat, "category", false, ICL_LANGUAGE_CODE);
+	    }
 	}
 	
 	if(!empty($tg_blog_slider) && !is_search() && !is_category() && !is_tag() && !is_archive() && !empty($tg_blog_slider_cat))

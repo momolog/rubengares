@@ -107,6 +107,7 @@ function photography_substr($str, $length, $minword = 3)
 {
     $sub = '';
     $len = 0;
+    $str = strip_tags($str);
     
     foreach (explode(' ', $str) as $word)
     {
@@ -148,7 +149,7 @@ function photography_posts($sort = 'recent', $items = 3, $echo = TRUE, $show_thu
 	{
 		global $wpdb;
 		
-		$query = "SELECT ID, post_title, post_content FROM {$wpdb->prefix}posts WHERE post_type = 'post' AND post_status= 'publish' AND '.$wpdb->wp_icl_translations.'.language_code = 'en' ORDER BY comment_count DESC LIMIT 0,".$items;
+		$query = "SELECT ID, post_title, post_content FROM {$wpdb->prefix}posts WHERE post_type = 'post' AND post_status= 'publish' ORDER BY comment_count DESC LIMIT 0,".$items;
 		//$query = $wpdb->prepare($query);
 		$posts = $wpdb->get_results($query);
 		$title = esc_html__('Popular Posts', 'photography-translation'); 
@@ -636,6 +637,29 @@ function photography_resort_gallery_img($all_photo_arr)
 					else
 					{
 						$sorted_all_photo_arr[$gallery_img_title.$gallery_img_meta->ID] = $gallery_img;
+					}
+					
+					ksort($sorted_all_photo_arr);
+				}
+			break;
+			
+			case 'filename':
+				foreach($all_photo_arr as $key => $gallery_img)
+				{
+					$gallery_img_filename = basename(get_attached_file($gallery_img));
+					
+					if(empty($gallery_img_filename))
+					{
+						$gallery_img_filename = $gallery_img;
+					}
+					
+					if(!isset($sorted_all_photo_arr[$gallery_img_filename]))
+					{
+						$sorted_all_photo_arr[$gallery_img_filename] = $gallery_img;	
+					}
+					else
+					{
+						$sorted_all_photo_arr[$gallery_img_filename.$gallery_img] = $gallery_img;
 					}
 					
 					ksort($sorted_all_photo_arr);
@@ -1319,5 +1343,54 @@ function photography_live_builder_end_wrapper($item_id = '')
 	{
 		return '';
 	}
+}
+
+function photography_blur($gdImageResource, $blurFactor = 3)
+{
+  // blurFactor has to be an integer
+  $blurFactor = round($blurFactor);
+  
+  $originalWidth = imagesx($gdImageResource);
+  $originalHeight = imagesy($gdImageResource);
+
+  $smallestWidth = ceil($originalWidth * pow(0.5, $blurFactor));
+  $smallestHeight = ceil($originalHeight * pow(0.5, $blurFactor));
+
+  // for the first run, the previous image is the original input
+  $prevImage = $gdImageResource;
+  $prevWidth = $originalWidth;
+  $prevHeight = $originalHeight;
+
+  // scale way down and gradually scale back up, blurring all the way
+  for($i = 0; $i < $blurFactor; $i += 1)
+  {    
+    // determine dimensions of next image
+    $nextWidth = $smallestWidth * pow(2, $i);
+    $nextHeight = $smallestHeight * pow(2, $i);
+
+    // resize previous image to next size
+    $nextImage = imagecreatetruecolor($nextWidth, $nextHeight);
+    imagecopyresized($nextImage, $prevImage, 0, 0, 0, 0, 
+      $nextWidth, $nextHeight, $prevWidth, $prevHeight);
+
+    // apply blur filter
+    imagefilter($nextImage, IMG_FILTER_GAUSSIAN_BLUR);
+
+    // now the new image becomes the previous image for the next step
+    $prevImage = $nextImage;
+    $prevWidth = $nextWidth;
+      $prevHeight = $nextHeight;
+  }
+
+  // scale back to original size and blur one more time
+  imagecopyresized($gdImageResource, $nextImage, 
+    0, 0, 0, 0, $originalWidth, $originalHeight, $nextWidth, $nextHeight);
+  imagefilter($gdImageResource, IMG_FILTER_GAUSSIAN_BLUR);
+
+  // clean up
+  imagedestroy($prevImage);
+
+  // return result
+  return $gdImageResource;
 }
 ?>

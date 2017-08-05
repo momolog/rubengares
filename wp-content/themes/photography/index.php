@@ -21,7 +21,7 @@ if(!empty($tg_blog_slider_layout))
 }
 ?>
 
-<div id="page_content_wrapper">
+<div class="page_content_wrapper">
     
     <div class="inner">
 
